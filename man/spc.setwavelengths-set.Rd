@@ -2,19 +2,25 @@
 % Please edit documentation in R/Spectra-Methods.R
 \name{spc.setwavelengths<-}
 \alias{spc.setwavelengths<-}
-\title{Setting wavelenghts in a spectral object}
+\title{Setting wavelengths  in a \code{Spectra} object}
 \usage{
-spc.setwavelengths(...)
+spc.setwavelengths(object,value)
 }
 \arguments{
-\item{...}{spectra object}
+\item{object}{A \code{Spectra} object}
+
+\item{value}{Numeric}
 }
 \description{
-Function  to change or set wavelenghts insade of  a spectral object
+Function  to change or set wavelengths  inside  of  a \code{Spectra} object
 }
 \examples{
  x <- spc.example_spectra()
+ show(x)
  spc.setwavelengths(x) <- 300:800
  show(x)
+}
+\seealso{
+\code{\link{spc.getwavelengths}}
 }
 

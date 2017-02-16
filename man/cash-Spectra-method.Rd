@@ -3,23 +3,28 @@
 \docType{methods}
 \name{$,Spectra-method}
 \alias{$,Spectra-method}
-\title{Extract or replace parts of a spectra object}
+\title{Extract or replace parts of a \code{Spectra} object}
 \usage{
-x[i] <- spc.example_spectra()
-x[i, j, ...] <- spc.example_spectra()
-x[[i]] <- spc.example_spectra()
-x$i <- spc.example_spectra()
+x[i] 
+x[i, j] 
+x[[i]] 
+x$i #More usage cases to be added
 }
 \arguments{
-\item{Spectra}{object from which to extract element(s) or in which to replace element(s)}
+\item{\code{Spectra}}{object from which to extract element(s) or in which to replace element(s)}
+
+\item{i}{A numeric (row index) variable}
+
+\item{j}{A character (column name) or a numeric (column index) variable}
 }
 \description{
-Operators acting on  spectral objects such as vectors, matrices, arrays and lists to extract or replace parts
+Operators acting on  \code{Spectra} objects  to extract or replace parts
 }
 \examples{
- 
- 
-
-
+ sp<-spc.example_spectra()
+ # spc.colnames() is used to extract column names
+ head(spc.colnames(sp))
+ head(sp$anap_300)
+ sp[,"anap_345"]
 }
 
